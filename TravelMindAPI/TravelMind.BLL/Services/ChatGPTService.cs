@@ -11,7 +11,7 @@ namespace TravelMind.BLL.Services
     public class ChatGPTService : IChatGPTService
     {
         private readonly HttpClient _httpClient;
-        private readonly string _apiKey = "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"; // Replace with your actual ChatGPT API key
+        private readonly string _apiKey = ""; 
 
         public ChatGPTService(HttpClient httpClient)
         {
