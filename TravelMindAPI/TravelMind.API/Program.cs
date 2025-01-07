@@ -1,8 +1,15 @@
+using TravelMind.BLL.Interfaces;
+using TravelMind.BLL.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IRoutePlanningService, RoutePlanningService>();
+builder.Services.AddHttpClient<IWeatherService, WeatherService>();
+builder.Services.AddHttpClient<IChatGPTService, ChatGPTService>();
 
 var app = builder.Build();
 

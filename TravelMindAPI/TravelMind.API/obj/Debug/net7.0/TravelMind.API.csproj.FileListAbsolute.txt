@@ -15,7 +15,6 @@ C:\TravelMind\TravelMindAPI\TravelMind.API\obj\Debug\net7.0\TravelMind.API.Gener
 C:\TravelMind\TravelMindAPI\TravelMind.API\obj\Debug\net7.0\TravelMind.API.AssemblyInfoInputs.cache
 C:\TravelMind\TravelMindAPI\TravelMind.API\obj\Debug\net7.0\TravelMind.API.AssemblyInfo.cs
 C:\TravelMind\TravelMindAPI\TravelMind.API\obj\Debug\net7.0\TravelMind.API.csproj.CoreCompileInputs.cache
-C:\TravelMind\TravelMindAPI\TravelMind.API\obj\Debug\net7.0\TravelMind.API.MvcApplicationPartsAssemblyInfo.cs
 C:\TravelMind\TravelMindAPI\TravelMind.API\obj\Debug\net7.0\TravelMind.API.MvcApplicationPartsAssemblyInfo.cache
 C:\TravelMind\TravelMindAPI\TravelMind.API\obj\Debug\net7.0\staticwebassets\msbuild.TravelMind.API.Microsoft.AspNetCore.StaticWebAssets.props
 C:\TravelMind\TravelMindAPI\TravelMind.API\obj\Debug\net7.0\staticwebassets\msbuild.build.TravelMind.API.props
@@ -31,3 +30,7 @@ C:\TravelMind\TravelMindAPI\TravelMind.API\obj\Debug\net7.0\refint\TravelMind.AP
 C:\TravelMind\TravelMindAPI\TravelMind.API\obj\Debug\net7.0\TravelMind.API.pdb
 C:\TravelMind\TravelMindAPI\TravelMind.API\obj\Debug\net7.0\TravelMind.API.genruntimeconfig.cache
 C:\TravelMind\TravelMindAPI\TravelMind.API\obj\Debug\net7.0\ref\TravelMind.API.dll
+C:\TravelMind\TravelMindAPI\TravelMind.API\bin\Debug\net7.0\TravelMind.BLL.dll
+C:\TravelMind\TravelMindAPI\TravelMind.API\bin\Debug\net7.0\TravelMind.Shared.dll
+C:\TravelMind\TravelMindAPI\TravelMind.API\bin\Debug\net7.0\TravelMind.BLL.pdb
+C:\TravelMind\TravelMindAPI\TravelMind.API\bin\Debug\net7.0\TravelMind.Shared.pdb

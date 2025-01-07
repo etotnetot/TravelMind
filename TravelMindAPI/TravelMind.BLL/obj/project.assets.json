@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "TravelMind.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/TravelMind.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TravelMind.Shared.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "TravelMind.Shared/1.0.0": {
+      "type": "project",
+      "path": "../TravelMind.Shared/TravelMind.Shared.csproj",
+      "msbuildProject": "../TravelMind.Shared/TravelMind.Shared.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "TravelMind.Shared >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\dimad\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\TravelMind\\TravelMindAPI\\TravelMind.Shared\\TravelMind.Shared.csproj": {
+              "projectPath": "C:\\TravelMind\\TravelMindAPI\\TravelMind.Shared\\TravelMind.Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

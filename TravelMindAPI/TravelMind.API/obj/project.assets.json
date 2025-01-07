@@ -107,6 +107,29 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "TravelMind.BLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "TravelMind.Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TravelMind.BLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TravelMind.BLL.dll": {}
+        }
+      },
+      "TravelMind.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/TravelMind.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TravelMind.Shared.dll": {}
+        }
       }
     }
   },
@@ -451,12 +474,24 @@
         "swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "TravelMind.BLL/1.0.0": {
+      "type": "project",
+      "path": "../TravelMind.BLL/TravelMind.BLL.csproj",
+      "msbuildProject": "../TravelMind.BLL/TravelMind.BLL.csproj"
+    },
+    "TravelMind.Shared/1.0.0": {
+      "type": "project",
+      "path": "../TravelMind.Shared/TravelMind.Shared.csproj",
+      "msbuildProject": "../TravelMind.Shared/TravelMind.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.AspNetCore.OpenApi >= 7.0.3",
-      "Swashbuckle.AspNetCore >= 6.4.0"
+      "Swashbuckle.AspNetCore >= 6.4.0",
+      "TravelMind.BLL >= 1.0.0",
+      "TravelMind.Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -485,7 +520,14 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\TravelMind\\TravelMindAPI\\TravelMind.BLL\\TravelMind.BLL.csproj": {
+              "projectPath": "C:\\TravelMind\\TravelMindAPI\\TravelMind.BLL\\TravelMind.BLL.csproj"
+            },
+            "C:\\TravelMind\\TravelMindAPI\\TravelMind.Shared\\TravelMind.Shared.csproj": {
+              "projectPath": "C:\\TravelMind\\TravelMindAPI\\TravelMind.Shared\\TravelMind.Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

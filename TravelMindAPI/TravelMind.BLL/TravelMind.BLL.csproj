@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TravelMind.Shared\TravelMind.Shared.csproj" />
+  </ItemGroup>
+
 </Project>
