@@ -9,6 +9,6 @@ namespace TravelMind.BLL.Interfaces
 {
     public interface IRoutePlanningService
     {
-        Task<RouteResponse> PlanRouteAsync(RouteRequest request);
+        Task<TripPlanResponse> PlanRouteAsync(RouteRequest request);
     }
 }

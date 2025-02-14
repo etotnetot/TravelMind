@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Newtonsoft.Json;
 using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
 using TravelMind.BLL.Interfaces;
+using TravelMind.Shared.Models;
 
 namespace TravelMind.BLL.Services
 {
@@ -18,26 +15,67 @@ namespace TravelMind.BLL.Services
             _httpClient = httpClient;
         }
 
-        public async Task<string> GetTripPlanAsync(string prompt)
+        public async Task<TripPlanResponse> GetTripPlanAsync(string prompt)
         {
-            var requestContent = new
+            string apiKey = "";
+
+            var httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {apiKey}");
+
+            var request = new
             {
-                model = "text-davinci-003",
                 prompt = prompt,
+                temperature = 0.5,
+                max_tokens = 500
+            };
+
+            var content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
+
+            var response = await httpClient.PostAsync("https://api.openai.com/v1/engines/davinci-codex/completions", content);
+            var responseBody = await response.Content.ReadAsStringAsync();
+
+            Console.WriteLine(responseBody);
+
+            return ParseRouteResponse(responseBody);
+        }
+
+        public TripPlanResponse ParseRouteResponse(string jsonResponse)
+        {
+            try
+            {
+                var data = JsonConvert.DeserializeObject<TripPlanResponse>(jsonResponse);
+                return data;
+            }
+            catch (Newtonsoft.Json.JsonException ex)
+            {
+                Console.WriteLine($"Ошибка при парсинге ответа: {ex.Message}");
+                return null;
+            }
+        }
+
+        /*public async Task<RouteResponse> GetTripPlanAsync(string prompt)
+        {
+            var request = new
+            {
+                prompt = prompt,
+                temperature = 0.5,
                 max_tokens = 1000
             };
 
-            var httpContent = new StringContent(JsonSerializer.Serialize(requestContent), Encoding.UTF8, "application/json");
-            _httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", _apiKey);
+            var content = new StringContent(JsonSerializer.Serialize(request), Encoding.UTF8, "application/json");
 
-            var response = await _httpClient.PostAsync("https://api.openai.com/v1/completions", httpContent);
+            var response = await _httpClient.PostAsync("https://api.openai.com/v1/completions", content);
             response.EnsureSuccessStatusCode();
 
-            var responseContent = await response.Content.ReadAsStringAsync();
-            var jsonResponse = JsonSerializer.Deserialize<JsonElement>(responseContent);
+            var responseBody = await response.Content.ReadAsStringAsync();
 
-            return jsonResponse.GetProperty("choices")[0].GetProperty("text").GetString();
-        }
+            // Парсинг JSON-ответа в объект TripResponse
+            var tripResponse = JsonSerializer.Deserialize<RouteResponse>(responseBody, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
+
+            return tripResponse;
+        }*/
     }
-
 }

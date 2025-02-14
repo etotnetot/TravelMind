@@ -34,3 +34,5 @@ C:\TravelMind\TravelMindAPI\TravelMind.API\bin\Debug\net7.0\TravelMind.BLL.dll
 C:\TravelMind\TravelMindAPI\TravelMind.API\bin\Debug\net7.0\TravelMind.Shared.dll
 C:\TravelMind\TravelMindAPI\TravelMind.API\bin\Debug\net7.0\TravelMind.BLL.pdb
 C:\TravelMind\TravelMindAPI\TravelMind.API\bin\Debug\net7.0\TravelMind.Shared.pdb
+C:\TravelMind\TravelMindAPI\TravelMind.API\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\TravelMind\TravelMindAPI\TravelMind.API\obj\Debug\net7.0\TravelMind.API.MvcApplicationPartsAssemblyInfo.cs

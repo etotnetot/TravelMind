@@ -9,8 +9,13 @@ namespace TravelMind.Shared.Models
     public class RouteRequest
     {
         public string StartCity { get; set; }
+
         public string EndCity { get; set; }
+
         public DateTime StartDate { get; set; }
+
         public DateTime EndDate { get; set; }
+
+        public int MaxBudget { get; set; }
     }
 }

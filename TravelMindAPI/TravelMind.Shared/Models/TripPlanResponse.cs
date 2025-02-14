@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace TravelMind.Shared.Models
 {
-    public class RouteResponse
+    public class TripPlanResponse
     {
         public List<string> SuggestedStops { get; set; }
+
         public List<string> Attractions { get; set; }
-        public string TransportPlan { get; set; }
+
+        public List<TransportPlan> TransportPlan { get; set; }
     }
 }

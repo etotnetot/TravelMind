@@ -1,0 +1,152 @@
+<header class="hero">
+    <div class="overlay">
+        <app-navbar></app-navbar>
+    
+          
+        <div class="hero-content">
+            <h1 class="header-hero" style="margin-top: -300px;">СПЛАНИРОВАТЬ ПУТЕШЕСТВИЕ</h1>
+            <div class="search-box" style="flex-direction: column;
+    gap: 20px; gap: 10px; height: auto;
+    ">
+                <div style="flex-direction: column;
+                display: flex
+            ; gap: 10px;">
+                    <div class="search-item-container">
+                        <div class="search-item">
+                            <label>ОТКУДА</label>
+                            <div class="input-wrapper">
+                                <input type="text" value="Москва" style="    width: 200px;"/>
+                                <!-- <i class="icon icon-plane"></i> -->
+                            </div>
+                        </div>
+                        <!-- <img src="/src/assets/img/icon.svg"> -->
+                        <div class="search-item">
+                            <label>КУДА</label>
+                            <div class="input-wrapper">
+                                <input type="text" value="Краснодар" style="    width: 200px;"/>
+                                <!-- <i class="icon icon-plane"></i> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-item-container">
+                        <div class="search-item">
+                            <label>ТУДА</label>
+                            <div class="input-wrapper">
+                                <input style="width: 200px;" type="date" value="2024-06-23" />
+                            </div>
+                        </div>
+                        <!-- <img src="src/assets/img/icon2.svg"> -->
+                        <div class="search-item">
+                            <label>ОБРАТНО</label>
+                            <div class="input-wrapper">
+                                <input style="width: 200px;" type="date" value="2024-07-01" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="input-group" style="display: flex; align-items: center; gap: 5px;">
+                
+                <input type="checkbox" id="car" formControlName="car" />
+                <label for="car" style="color: black;">Путешествую на своей машине</label>
+                
+            </div>  
+            <div><button class="search-btn"><a [routerLink]="['/search']" style="text-decoration: none; color: white;">В ПУТЕШЕСТВИЕ</a></button>
+            </div> 
+        </div>     
+        </div>
+
+                
+             
+    </div>
+</header>
+
+<section class="hot-tours" style="align-items: center;">
+    
+    <h1>Планирование поездки</h1>
+          <div style="width: 330px;"> 
+            <form [formGroup]="tripForm" (ngSubmit)="onSubmit()">
+                <div class="input-group">
+                  <label for="departureCity">Город отправления</label>
+                  <input id="input-txt" formControlName="departureCity" type="text" required />
+                </div>
+            
+                <div class="input-group">
+                  <label for="arrivalCity">Город прибытия</label>
+                  <input id="input-txt" formControlName="arrivalCity" type="text" required />
+                </div>
+            
+                <div class="input-group">
+                  <label for="departureDate">Дата отправления</label>
+                  <input id="input-txt" formControlName="departureDate" type="date" required />
+                </div>
+            
+                <div class="input-group">
+                  <label for="transport">Тип транспорта</label>
+                  <input type="checkbox" id="car" formControlName="car" />
+                  <label for="car">Путешествую на своей машине</label>
+                  <input type="checkbox" id="publicTransport" formControlName="publicTransport" />
+                  <label for="publicTransport">На общественном транспорте</label>
+                </div>
+            
+                <button class="search-btn" type="submit" [disabled]="!tripForm.valid">Планировать поездку</button>
+              </form>
+          </div>
+            
+
+            
+            <div *ngIf="route">
+                <div id="map"></div>
+                <div class="suggested-stops">
+                  <h2>Предложенные остановки:</h2>
+                  <ul>
+                    <li *ngFor="let stop of route.SuggestedStops">{{ stop }}</li>
+                  </ul>
+                </div>
+            
+                <div class="attractions">
+                  <h2>Достопримечательности:</h2>
+                  <ul>
+                    <li *ngFor="let attraction of route.Attractions">{{ attraction }}</li>
+                  </ul>
+                </div>
+              </div>
+</section>
+
+<section class="explore-world">
+    <div class="explore-content">
+        <div class="explore-block">
+            <img src="assets/img/img.jpg" style="width: 700px;">
+            <div class="explore-book">
+                <h2 class="explore-text">ОТКРОЙТЕ ДЛЯ СЕБЯ МИР ВМЕСТЕ С НАМИ</h2>
+                <p>Исследуете ли вы природный рай в мире, давайте вместе с нами найдем лучшее место в мире.</p>
+                <button style="margin-top: 20px; align-self: flex-start;" class="search-btn">Скачать путеводитель</button>
+            </div>
+        </div>      
+    </div>
+</section>
+
+<section class="read-before-travel">
+    <h2 style="font-size: 32px;">ПРОЧТИТЕ ПЕРЕД ПОЕЗДКОЙ</h2>
+    <div class="article-grid">
+        <div class="article-card">
+            <img src="assets/img/nusa_penida.jpg" alt="Нуса Пенида">
+            <div class="article-card-text" style="text-align: right;">
+                <h1 class="article-first-header">ПУТЕВОДИТЕЛЬ ПО ОСТРОВУ НУСА-ПЕНИДА</h1>
+                <p class="article-first-text">Красивый экзотический остров Нуса Пенида находится всего в 25 километрах от Бали.</p>
+            </div>    
+        </div>
+        <div class="article-card" style="padding-top: 50px; flex-direction: row-reverse;">
+            <img src="assets/img/waterfalls.jpg" alt="Водопады Индонезии">
+            <div class="article-card-text" style="text-align: left;">
+                <h1 style="font-size: 30px; font-weight: 800;">17 ЛУЧШИХ ВОДОПАДОВ ИНДОНЕЗИИ</h1>
+                <p class="article-second-text">Составить путеводитель по водопадам Индонезии сложно, потому что в этой стране много водопадов.</p>
+            </div>  
+        </div>
+    </div>
+</section>
+
+<footer class="subscription">
+    <h2>ЗАРЕГИСТРИРУЙТЕСЬ СЕЙЧАС И ПОЛУЧИТЕ СКИДКУ ДО 10% НА ЭТИ ВЫХОДНЫЕ!</h2>
+    <button class="subscribe-btn">Регистрация</button>
+</footer>

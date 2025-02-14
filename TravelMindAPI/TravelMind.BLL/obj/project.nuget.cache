@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "v86zL8+dlsq6HnudVVoAK7g+iJc7KBJLV9/e5Bsi/5HdWguJWp03SqPJ1Iu/5ML6JxjHLyzcZ5KeInWbMhNvnA==",
+  "dgSpecHash": "e2lw03T7aEvwOpu0t9YDlnt64MCwhoq98Iq7cN46pKuuFLvsYrMViscF4P0LtJXLGLvpG+PHr7X8WwhPgpLwUg==",
   "success": true,
   "projectFilePath": "C:\\TravelMind\\TravelMindAPI\\TravelMind.BLL\\TravelMind.BLL.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\dimad\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

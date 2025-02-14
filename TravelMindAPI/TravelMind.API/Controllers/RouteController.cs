@@ -16,7 +16,7 @@ namespace TravelMind.API.Controllers
         }
 
         [HttpPost("plan-route")]
-        public async Task<ActionResult<RouteResponse>> PlanRoute([FromBody] RouteRequest request)
+        public async Task<ActionResult<TripPlanResponse>> PlanRoute([FromBody] RouteRequest request)
         {
             var response = await _routePlanningService.PlanRouteAsync(request);
 

@@ -1,0 +1,600 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: Mulish, sans-serif;
+	line-height: 1.6;
+}
+.hero {
+	position: relative;
+	height: 100vh;
+	background: url('assets/img/header-bg.png') center center/cover no-repeat;
+}
+.hero-search {
+	height: 170vh;
+	background: url('assets/img/header-bg.png') center center/cover no-repeat;
+}
+.header-hero {
+	width: 1100px;
+}
+.overlay {
+	height: inherit;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+}
+.logo {
+	color: white;
+	font-size: 24px;
+}
+.nav-links {
+	list-style: none;
+	display: flex;
+}
+.nav-links li {
+	margin-left: 20px;
+}
+.nav-links a {
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+}
+.hero-content {
+	text-align: center;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.hero-content h1 {
+	font-size: 50px;
+	font-weight: 400;
+	margin-bottom: 30px;
+}
+.search-box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgba(255, 255, 255, 0.6);
+	padding: 20px;
+	border-radius: 25px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	position: absolute;
+	bottom: -210px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80%;
+	width: 1000px;
+	height: 200px;
+}
+.search-item-container {
+	display: flex;
+	background-color: #ffffff;
+	padding: 20px 20px;
+	border-radius: 40px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.search-item {
+	position: relative;
+}
+.search-item label {
+	display: block;
+	font-size: 13px;
+	color: #6e6e6e;
+	margin-bottom: 5px;
+	text-align: center;
+}
+.input-wrapper {
+	position: relative;
+}
+.input-wrapper input {
+	font-family: Mulish, sans-serif;
+	width: 170px;
+	padding: 10px 15px;
+	padding-right: 40px;
+	border: none;
+	border-radius: 10px;
+	font-size: 17px;
+	outline: none;
+	background-color: #f2f2f2;
+	text-align: center;
+}
+.input-wrapper .icon {
+	position: absolute;
+	right: -40px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 18px;
+	color: #6e6e6e;
+}
+.input-group input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.input-group input[type="checkbox"]:checked {
+    background-color: #007BFF;
+    border-color: #007BFF;
+}
+
+.input-group input[type="checkbox"]::after {
+    content: '✔';
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.input-group input[type="checkbox"]:checked::after {
+    display: block;
+}
+
+.input-group label {
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+}
+.search-btn {
+	padding: 10px 30px;
+	background-color: #177BA5;
+	color: white;
+	height: 60px;
+	width: 90 px;
+	border: none;
+	border-radius: 40px;
+	font-size: 18px;
+	cursor: pointer;
+	font-family: Mulish, sans-serif;
+	align-self: center;
+	box-shadow: 0 2px 10px rgba(0, 123, 255, 0.3);
+	transition: background-color 0.3s ease;
+}
+.article-h1 {
+	font-size: 30px; 
+	text-align: center; 
+	width: 550px;  
+	font-size: 23px;
+	align-self: flex-end;
+}
+.article-p {
+	width: 500px; 
+	align-self: flex-end; 
+	font-size: 20px; 
+	margin-top: 15px;
+}
+.subscribe input {
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+	font-size: 14px;
+}
+.subscribe button {
+	font-weight: 800; 
+	font-size: 14px;
+}
+.card-subscribe {
+	background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.next-btn {
+	align-items: center;
+    display: flex;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.search-btn-book {
+	font-size: 14px;
+	height: 50px;
+	padding: 10px 30px;
+	background-color: #177BA5;
+	color: white;
+	height: 60px;
+	width: 90 px;
+	border: none;
+	border-radius: 40px;
+	font-size: 18px;
+	cursor: pointer;
+	font-family: Mulish, sans-serif;
+	align-self: center;
+	box-shadow: 0 2px 10px rgba(0, 123, 255, 0.3);
+	transition: background-color 0.3s ease;
+}
+.search-btn:hover {
+	background-color: #0056b3;
+}
+.icon-plane::before {
+	content: url('//img/icon.svg');
+}
+.icon-calendar::before {
+	content: url('//img/icon2.svg');
+}
+.hot-tours {
+	padding: 50px;
+	display: flex;
+	justify-content:center ;
+	flex-direction: column;
+	text-align: center;
+}
+.hot-tours h2 {
+	font-size: 38px;
+	margin-bottom: 30px;
+}
+.tours-grid {
+	display: flex;
+	justify-content: space-evenly;
+}
+.tours-grid img{
+	border-radius: 40px;
+}
+.tour-card {
+	background-color: #f9f9f9;
+	padding: 20px;
+	border-radius: 50px;
+	text-align: center;
+	width: 27%;
+	font-size: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.tour-card img {
+	width: 90%;
+	margin-top: 10px;
+	border-radius: 10px;
+}
+.tour-info {
+	margin-top: 20px;
+}
+.explore-world {
+	background-color: #f1f1f1;
+	padding: 50px;
+	text-align: center;
+}
+.read-before-travel {
+	padding: 50px;
+	text-align: center;
+}
+.article-grid {
+	/* padding-top: 50px;
+	*/
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 1100px;
+	margin: 0 auto;
+}
+.article-card {
+	display: flex;
+	align-content: center;
+	text-align: center;
+	justify-content: space-between;
+}
+.article-card img {
+	width: 50%;
+	border-radius: 10px;
+}
+.article-card-text {
+	width: 50% !important;
+	justify-content: center;
+	flex-direction: column;
+	display: flex;
+}
+.subscription {
+	background: url('https://static.vecteezy.com/system/resources/previews/033/503/917/large_2x/aerial-view-of-beautiful-tropical-beach-with-white-sand-and-turquoise-ocean-wave-aerial-view-of-sandy-beach-with-tourists-swimming-in-beautiful-clear-sea-water-ai-generated-free-photo.jpg') center center/cover no-repeat;
+	text-align: center;
+	flex-direction: column;
+	padding: 50px;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+.subscribe-btn {
+	padding: 10px 30px;
+	margin-top: 30px;
+	background-color: #177BA5;
+	color: white;
+	height: 60px;
+	width: 90 px;
+	border: none;
+	border-radius: 40px;
+	font-size: 20px;
+	cursor: pointer;
+	font-family: Mulish, sans-serif;
+	align-self: center;
+	box-shadow: 0 2px 10px rgba(0, 123, 255, 0.3);
+	transition: background-color 0.3s ease;
+}
+.button-price {
+	font-weight: 700;
+	font-size: 22px;
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.explore-block {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.explore-book p {
+	display: flex;
+	flex-direction: column;
+	width: 700px;
+	width: 600px;
+	font-size: 25px;
+	text-align: left;
+	margin-top: 20px;
+}
+.article-first-header {
+	font-size: 30px;
+	font-weight: 800;
+	width: 400px;
+	align-self: flex-end;
+}
+.article-first-text {
+	width: 500px;
+	align-self: flex-end;
+	font-size: 20px;
+	margin-top: 15px;
+}
+.article-second-text {
+	width: 400px;
+	font-size: 20px;
+	margin-top: 15px;
+}
+.explore-book {
+	display: flex;
+	flex-direction: column;
+	width: 700px;
+}
+.explore-text {
+	font-size: 36px;
+	text-align: left;
+	margin-top: -40px;
+	color: #177BA5;
+	font-weight: 700;
+	width: 500px
+}
+.login-form {
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	max-width: 400px;
+	width: 1500px;
+	text-align: center;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+	margin-bottom: 20px;
+	font-size: 24px;
+	color: #333;
+}
+.input-group {
+	position: relative;
+	margin-bottom: 15px;
+}
+#input-txt,input[type="email"],input[type="password"] {
+	width: 100%;
+	padding: 12px 15px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	font-size: 16px;
+	outline: none;
+}
+input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus {
+	border-color: #009688;
+}
+.password-toggle {
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+.checkbox-group {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.checkbox-group input {
+	margin-right: 5px;
+}
+.checkbox-group a {
+	font-size: 14px;
+	color: #029FAE;
+	text-decoration: none;
+}
+.checkbox-group a:hover {
+	text-decoration: underline;
+}
+.login-btn {
+	width: 100%;
+	background-color: #029FAE;
+	color: white;
+	padding: 12px 0;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+.login-btn:hover {
+	background-color: #00796b;
+}
+p {
+	margin-top: 10px;
+}
+p a {
+	color: #029FAE;
+	text-decoration: none;
+}
+p a:hover {
+	text-decoration: underline;
+}
+.register-form {
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	max-width: 400px;
+	width: 1500px;
+	text-align: center;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.results {
+	display: flex;
+	justify-content: flex-start;
+	padding-left: 28px;
+	flex-wrap: wrap;
+	gap: 50px;
+	padding-top: 40px;
+	width: 1000px;
+	flex-grow: 1;
+	margin: auto;
+}
+.card {
+	width: 150px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card img {
+	width: 100%;
+	height: 100px;
+	object-fit: cover;
+}
+.card-info {
+	padding: 10px;
+}
+.card-info .title {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+.card-info .price, .card-info .location {
+	font-size: 14px;
+	color: #777;
+}
+.load-more {
+	padding: 10px 20px;
+	background-color: #009688;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 20px;
+}
+.subscription {
+	padding: 40px;
+	background-color: #e8e8e8;
+	display: flex;
+	justify-content: center;
+}
+.sub-content {
+	display: flex;
+	gap: 20px;
+	max-width: 800px;
+	width: 100%;
+	align-items: center;
+}
+.sub-info h3 {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.subscribe {
+	display: flex;
+	gap: 10px;
+}
+.subscribe input {
+	border-radius: 40px;
+	border: 1px solid #ccc;
+	flex: 1;
+}
+.registration {
+	text-align: center;
+	padding: 40px;
+	background: #009688;
+	color: white;
+}
+.registration h3 {
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+.register-btn {
+	padding: 10px 20px;
+	background-color: #fff;
+	color: #009688;
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.subscription h2 {
+	color: #567273;
+	font-weight: 700;
+	font-size: 30px;
+	width: 800px;
+	margin: auto;
+}
+.results-content {
+	text-align: center;
+	margin-top: -40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(255, 255, 255, 0.94);
+	border-radius: 25px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.results-box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgba(255, 255, 255, 0.6);
+	padding: 20px;
+	border-radius: 25px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	position: absolute;
+	bottom: -210px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 1000px;
+	height: 200px;
+}
+.results-box-search {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgba(255, 255, 255, 0.6);
+	padding: 20px;
+	border-radius: 25px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	margin-left: 50px;
+	width: 1000px;
+	height: 200px;
+}
+.read {
+	padding: 50px;
+	text-align: center;
+}
